@@ -24,7 +24,15 @@ def send_inline_keyboard(update: Update, context: CallbackContext):
         text="Inline Keyboard.",
         reply_markup=InlineKeyboardMarkup(
             inline_keyboard=[
-                [InlineKeyboardButton('button 1', callback_data="btn1"), InlineKeyboardButton('button 2', callback_data='btn2')]
+                [InlineKeyboardButton('button 1', url="https://kun.uz/"), InlineKeyboardButton('button 2', callback_data='btn2')]
             ]
         )
     )
+
+
+def send_products(update: Update, context: CallbackContext):
+    update.message.reply_text("Mahsulotlar royxati.")
+
+
+def handle_btn2(update: Update, context: CallbackContext):
+    update.callback_query.answer("siz button 2 ni bosdingiz.")
