@@ -8,7 +8,7 @@ def start(update: Update, context: CallbackContext):
 
 def send_keyboard(update: Update, context: CallbackContext):
     update.message.reply_text(
-        text="Keyboard.",
+        text="Darslar. O'zingizga kerakli bo'limni tanlang!",
         reply_markup=ReplyKeyboardMarkup(
             keyboard=[
                 [KeyboardButton('Frontend dasturlar'), KeyboardButton("Backend dasturlar"),KeyboardButton('No Code dasturlari')],
